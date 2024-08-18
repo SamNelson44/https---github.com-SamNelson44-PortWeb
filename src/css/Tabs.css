@@ -1,0 +1,39 @@
+.container {
+  border: 1px solid white;
+  border-left: transparent;
+  border-right: transparent;
+  width: 20%;
+  z-index: 1;
+  margin-left: 2%;
+  text-align: left;
+}
+
+.box {
+  color: white;
+  font-size: larger;
+  padding: 2px;
+  margin: 0px;
+  background-color: transparent;
+  z-index: 1;
+  text-align: left;
+  transition: text-shadow 1s ease;
+  transition: font-size 0.5s ease;
+}
+
+.box:hover {
+  font-size: xx-large;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1), 
+               0 0 40px rgba(255, 255, 255, 1), 
+               0 0 80px rgba(255, 255, 255, 1);
+}
+
+.box a {
+  color: inherit;
+  text-decoration: none;
+  display: inline;
+}
+
+.box a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+               0 0 20px rgba(255, 255, 255, 1);
+}
