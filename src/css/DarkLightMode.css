@@ -1,0 +1,31 @@
+.lightMode {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  display: inline-block;
+  font-size: small;
+  padding: 4px;
+  margin-top: 830px;
+  background-color: transparent;
+  z-index: 1;
+  text-align: left;
+  margin-left: 1%;
+  width: fit-content;
+  position: fixed;
+}
+
+.darkMode {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  display: inline-block;
+  font-size: small;
+  padding: 4px;
+  margin-top: 830px;
+  background-color: transparent;
+  z-index: 1;
+  text-align: left;
+  margin-left: 1%;
+  width: fit-content;
+  position: fixed;
+}

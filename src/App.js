@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import Tabs from './components/Tabs';
+import DarkLightButton from './components/DarkLightButton';
+import { DarkLightProvider } from './Contexts/DarkLightContext';
 
 function App() {
   useEffect(() => {
@@ -73,18 +75,17 @@ function App() {
   }, []); // Empty dependency array to run this effect only once
 
   return (
-    <div className="App">
-      <div className='outerContainer'>
-        <canvas id="backgroundCanvas"></canvas>
-        <h1 className="title">Sam Nelson</h1>
-        <h4 className='subTitle'>Developer & Student</h4>
-
-        <Tabs />
-        {/* 
-        <img src={logo} className="App-logo" alt="logo" />
-        */}
+    <DarkLightProvider>
+      <div className="App">
+        <div className='outerContainer'>
+          <canvas id="backgroundCanvas"></canvas>
+          <h1 className="title">Sam Nelson</h1>
+          <h4 className='subTitle'>Developer & Student</h4>
+          <Tabs />
+          <DarkLightButton />
+        </div>
       </div>
-    </div>
+    </DarkLightProvider>
   );
 }
 

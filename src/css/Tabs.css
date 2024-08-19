@@ -1,12 +1,11 @@
 .container {
-  border: 1px solid white;
-  border-left: transparent;
-  border-right: transparent;
+  border: transparent;
   width: 20%;
   z-index: 1;
   margin-left: 5%;
   text-align: left;
   margin-top: 5%;
+  height: fit-content;
 }
 
 .box {
@@ -22,6 +21,7 @@
 }
 
 .box:hover {
+  cursor: pointer;
   font-size: xx-large;
   text-shadow: 0 0 20px rgba(255, 255, 255, 1), 
                0 0 40px rgba(255, 255, 255, 1), 
