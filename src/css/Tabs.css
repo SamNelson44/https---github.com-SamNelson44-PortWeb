@@ -4,14 +4,15 @@
   border-right: transparent;
   width: 20%;
   z-index: 1;
-  margin-left: 2%;
+  margin-left: 5%;
   text-align: left;
+  margin-top: 5%;
 }
 
 .box {
   color: white;
   font-size: larger;
-  padding: 2px;
+  padding: 4px;
   margin: 0px;
   background-color: transparent;
   z-index: 1;
