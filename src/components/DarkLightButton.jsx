@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 import '../css/DarkLightMode.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { useDarkLight } from '../Contexts/DarkLightContext';
 
 const DarkLightButton = () => {
-  // true is dark mode by default
-  const [toggleMode, settoggleMode] = useState(true);
-
-  const toggleLightMode = () => {
-    settoggleMode((prevMode) => !prevMode);
-  };
+  const { toggleMode, toggleLightMode } = useDarkLight();
 
   return (
     <button className={toggleMode ? 'darkMode' : 'lightMode'} onClick={toggleLightMode}>
