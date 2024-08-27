@@ -1,11 +1,15 @@
 import React from 'react';
 import '../css/Tabs.css';
 import Link from './Link'; // Import your custom link component
+import { useDarkLight } from '../Contexts/DarkLightContext';
 
 const Header = () => {
+
+  const { toggleMode } = useDarkLight();
+
   return (
     <header className='container'>
-      <div className='box'>
+      <div className={toggleMode ? 'box' : 'box-light'}>
         <Link href='https://p5aholic.me/projects/'>Home</Link>
       </div>
       <div className='box'>

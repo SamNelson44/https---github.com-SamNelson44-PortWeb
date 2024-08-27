@@ -8,6 +8,7 @@ export const DarkLightProvider = ({ children }) => {
 
   const toggleLightMode = () => {
     setToggleMode(prevMode => !prevMode);
+    console.log("mode: ", toggleMode);
   };
 
   return (

@@ -1,20 +1,28 @@
 import React, { useEffect } from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import Tabs from './components/Tabs';
 import DarkLightButton from './components/DarkLightButton';
-import { DarkLightProvider } from './Contexts/DarkLightContext';
+import { DarkLightProvider, useDarkLight } from './Contexts/DarkLightContext';
 
 function App() {
+  const { toggleMode } = useDarkLight();
+
   useEffect(() => {
     const canvas = document.getElementById('backgroundCanvas');
+
+    if (!canvas) {
+      console.error('Canvas element not found');
+      return;
+    }
+
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    canvas.style.backgroundColor = toggleMode ? 'black' : 'white';
+
     let particles = [];
 
-    // Particle constructor
     function Particle(x, y, dx, dy, radius) {
       this.x = x;
       this.y = y;
@@ -22,14 +30,14 @@ function App() {
       this.dy = dy;
       this.radius = radius;
 
-      this.draw = function() {
+      this.draw = function () {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.fillStyle = toggleMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)';
         ctx.fill();
       };
 
-      this.update = function() {
+      this.update = function () {
         if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
           this.dx = -this.dx;
         }
@@ -60,32 +68,37 @@ function App() {
       requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach(particle => particle.update());
+      particles.forEach((particle) => particle.update());
     }
 
     init();
     animate();
 
-    // Adjust canvas size when the window resizes
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       init();
     });
-  }, []); // Empty dependency array to run this effect only once
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+      });
+    };
+  }, [toggleMode]);
 
   return (
-    <DarkLightProvider>
-      <div className="App">
-        <div className='outerContainer'>
-          <canvas id="backgroundCanvas"></canvas>
-          <h1 className="title">Sam Nelson</h1>
-          <h4 className='subTitle'>Developer & Student</h4>
-          <Tabs />
-          <DarkLightButton />
-        </div>
+    <div className="App">
+      <div className="outerContainer">
+        <canvas id="backgroundCanvas"></canvas>
+        <h1 className={toggleMode ? 'title' : 'title-light'}>Sam Nelson</h1>
+        <h4 className={toggleMode ? 'subTitle' : 'subTitle-light'}>Developer & Student</h4>
+        <Tabs />
+        <DarkLightButton />
       </div>
-    </DarkLightProvider>
+    </div>
   );
 }
 
