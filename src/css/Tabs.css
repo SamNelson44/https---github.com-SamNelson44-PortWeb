@@ -8,28 +8,23 @@
   height: fit-content;
 }
 
-.box {
-  color: white;
+.box,
+.box-light {
   font-size: larger;
   padding: 4px;
   margin: 0px;
   background-color: transparent;
   z-index: 1;
   text-align: left;
-  transition: text-shadow 1s ease;
-  transition: font-size 0.5s ease;
+  transition: font-size 0.5s ease, text-shadow 1s ease;
+}
+
+.box {
+  color: white;
 }
 
 .box-light {
   color: black;
-  font-size: larger;
-  padding: 4px;
-  margin: 0px;
-  background-color: transparent;
-  z-index: 1;
-  text-align: left;
-  transition: text-shadow 1s ease;
-  transition: font-size 0.5s ease;
 }
 
 .box:hover {
@@ -37,7 +32,14 @@
   font-size: xx-large;
 }
 
-.box a {
+.box:hover,
+.box-light:hover {
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+.box a,
+.box-light a {
   color: inherit;
   text-decoration: none;
   display: inline;
@@ -50,5 +52,5 @@
 
 .box-light a:hover {
   text-shadow: 0 0 10px rgb(0, 0, 0),
-               0 0 20px rgba(255, 255, 255, 1);
+               0 0 20px rgb(255, 255, 255);
 }

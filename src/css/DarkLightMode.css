@@ -7,14 +7,17 @@
   font-size: small;
   font-weight: bold;
   padding: 4px;
-  margin-top: 830px;
-  z-index: 1;
+  z-index: 100;
   text-align: left;
   margin-left: 1%;
   width: fit-content;
   position: fixed;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
   transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: fixed;
+  bottom: 4rem;
+  left: 4rem;
+  margin-top: 0;
 }
 
 .darkMode {
@@ -25,7 +28,6 @@
   display: inline-block;
   font-size: small;
   padding: 4px;
-  margin-top: 830px;
   background-color: transparent;
   z-index: 1;
   text-align: left;
@@ -34,7 +36,19 @@
   position: fixed;
   box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.7);
   transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  position: fixed;
+  bottom: 4rem;
+  left: 4rem;
+  margin-top: 0;
 }
+
+@media (min-width: 1100px) {
+  .lightMode,
+  .darkMode {
+    left: 6rem;
+  }
+}
+
 
 .lightMode:hover{
   background-color: rgb(194, 194, 194);

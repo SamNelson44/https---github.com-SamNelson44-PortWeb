@@ -12,19 +12,19 @@ const Header = () => {
       <div className={toggleMode ? 'box' : 'box-light'}>
         <Link href='https://p5aholic.me/projects/'>Home</Link>
       </div>
-      <div className='box'>
+      <div className={toggleMode ? 'box' : 'box-light'}>
         <Link href='https://p5aholic.me/projects/'>About Me</Link>
       </div>
-      <div className='box'>
+      <div className={toggleMode ? 'box' : 'box-light'}>
         <Link href='https://p5aholic.me/projects/'>Projects</Link>
       </div>
-      <div className='box'>
+      <div className={toggleMode ? 'box' : 'box-light'}>
         <Link href='https://p5aholic.me/projects/'>Skills</Link>
       </div>
-      <div className='box'>
+      <div className={toggleMode ? 'box' : 'box-light'}>
         <Link href='https://p5aholic.me/projects/'>Resume</Link>
       </div>
-      <div className='box'>
+      <div className={toggleMode ? 'box' : 'box-light'}>
         <Link href='https://p5aholic.me/projects/'>Contact</Link>
       </div>
     </header>
