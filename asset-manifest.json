@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PortWeb/static/css/main.47d9a676.css",
+    "main.js": "/PortWeb/static/js/main.13281a02.js",
+    "static/js/453.27513c29.chunk.js": "/PortWeb/static/js/453.27513c29.chunk.js",
+    "index.html": "/PortWeb/index.html",
+    "main.47d9a676.css.map": "/PortWeb/static/css/main.47d9a676.css.map",
+    "main.13281a02.js.map": "/PortWeb/static/js/main.13281a02.js.map",
+    "453.27513c29.chunk.js.map": "/PortWeb/static/js/453.27513c29.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47d9a676.css",
+    "static/js/main.13281a02.js"
+  ]
+}
