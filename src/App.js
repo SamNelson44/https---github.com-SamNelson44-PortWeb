@@ -94,7 +94,7 @@ function App() {
       <div className="outerContainer">
         <canvas id="backgroundCanvas"></canvas>
         <h1 className={toggleMode ? 'title' : 'title-light'}>Sam Nelson</h1>
-        <h4 className={toggleMode ? 'subTitle' : 'subTitle-light'}>Developer & Student</h4>
+        <h4 className={toggleMode ? 'subTitle' : 'subTitle-light'}>Software Engineer</h4>
         <Tabs />
         <DarkLightButton />
       </div>
