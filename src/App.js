@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import Tabs from './components/Tabs';
 import DarkLightButton from './components/DarkLightButton';
+import SideText from './components/SideText';
 import { DarkLightProvider, useDarkLight } from './Contexts/DarkLightContext';
 
 function App() {
@@ -95,7 +96,12 @@ function App() {
         <canvas id="backgroundCanvas"></canvas>
         <h1 className={toggleMode ? 'title' : 'title-light'}>Sam Nelson</h1>
         <h4 className={toggleMode ? 'subTitle' : 'subTitle-light'}>Software Engineer</h4>
-        <Tabs />
+        <div className='homeSection'>
+          <div className='flex-child'>
+            <Tabs />
+          </div>
+          <SideText />
+        </div>
         <DarkLightButton />
       </div>
     </div>

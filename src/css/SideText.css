@@ -1,0 +1,14 @@
+.sideText {
+    border: 1px solid white;
+    background-color: black;
+    flex: child;
+    padding: 1rem;
+    /* Optional width or flex-grow */
+    width: 200px; /* or use flex: 1 */
+    background_color: gray;
+    box-shadow: 0px 0px 40px 15px rgba(255, 255, 255, 0.7);
+}
+
+.sideText h1 {
+    color: white;
+}
